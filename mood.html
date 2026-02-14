@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Mood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Select Your Mood 💬</h1>
+
+  <div class="moods">
+    <button onclick="selectMood('Happy')">😊 Happy</button>
+    <button onclick="selectMood('Sad')">😢 Sad</button>
+    <button onclick="selectMood('Angry')">😡 Angry</button>
+    <button onclick="selectMood('Lonely')">🥺 Lonely</button>
+  </div>
+
+  <script>
+    function selectMood(mood) {
+      localStorage.setItem("selectedMood", mood);
+      window.location.href = "chat.html";
+    }
+  </script>
+</body>
+</html>
